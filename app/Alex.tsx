@@ -18,14 +18,14 @@ export class Alex extends Component<Props, State> {
 	}
 
 	get actualTime() {
-		return (this.state.time * 2.25).toFixed(1)
+		return (this.state.time * 2.718).toFixed(1)
 	}
 
 	render() {
 		return (
 			<article>
 				<div>
-					Time in <em>Alex Time</em>
+					<em>Alex</em> says
 					<input
 						type="number"
 						onChange={e => this.setState({ time: parseFloat(e.target.value) })}
@@ -33,9 +33,10 @@ export class Alex extends Component<Props, State> {
 						step="0.5"
 						min="0"
 						max="10"
-					/>
+					/>{' '}
+					hours
 				</div>
-				{this.hasTime ? <div>Alex time converted to real world time {this.actualTime} hours</div> : null}
+				{this.hasTime ? <div>Alex time converted to real world time is {this.actualTime} hours</div> : null}
 			</article>
 		)
 	}

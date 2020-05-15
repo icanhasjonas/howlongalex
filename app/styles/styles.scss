@@ -1,10 +1,17 @@
+
 body,
 html {
 	margin: 0;
 	background-color: pink;
 	color: green;
-	font-family: teko;
-	font-size: 2vh;
+
+	$break: 800px;
+	@media only screen and (max-width: $break) {
+		font-size: 16pt;
+	}
+	@media only screen and (min-width: $break) {
+		font-size: 2vw;
+	}
 }
 
 main {
@@ -28,6 +35,7 @@ main {
 article {
 	margin: 0;
 	position: absolute;
+	min-width: 50vw;
 	top: 50%;
 	left: 50%;
 	-ms-transform: translate(-50%, -50%);
